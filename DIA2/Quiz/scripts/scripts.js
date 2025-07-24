@@ -66,7 +66,7 @@ let booleanitoski = true
 while (booleanitoski == true) {
     let menu1 = prompt(
     "=======================================\
-    \n    Bienvenido al simulador de stock   \
+    \n    Bienvenido al simulador de Hamburguesas   \
     \n========================================\
     \nSeleccione una opción:\
     \n\
@@ -78,7 +78,7 @@ while (booleanitoski == true) {
     ======================================")
 ;
 
-if (opciones == "1") {
+if (menu1 == "1") {
         let menu2 = prompt(
         "===========================================\
         \n            Menu de Ingredientes          \
@@ -95,22 +95,32 @@ if (opciones == "1") {
 
 
 
-if (menu1 == "1") {
+if (menu2 == "1") {
     let nombreIng = prompt("Ingresa el nombre del ingrediente que deseas añadir");
     let dscpIng = prompt("Ingresa la descripción del ingrediente");
     let valorIng = prompt("Ingresa el valor del ingrediente");
-    let stok = prompt("Ingresa la cantidad dispoible del ingrediente");
+    let stock = prompt("Ingresa la cantidad dispoible del ingrediente");
     let seguro = prompt("Segur@ que deseas añadir este ingrediente? \n1. Si \n2. No\n");
-}
-if (seguro == "1"){
-    ingredientes.push({
-        "nombreIng": nombreIng,
-        "dscpIng": dscpIng,
-        "valorIng": valorIng,
-        "stock": stock,
-    });
-    alert("El ingrediente fue agregado correctamente")
-    }
-}}
+    if (seguro == "1"){
+        ingredientes.push({
+            "nombreIng": nombreIng,
+            "dscpIng": dscpIng,
+            "valorIng": valorIng,
+            "stock": stock,
+        });
+        alert("El ingrediente fue agregado correctamente")
+    }else if (seguro == "2"){
+        alert("Opción no agregada")
+    } else {
+        alert("Opción incorrecta, volviendo al menu Principal")
+        }
+    }} 
+    else if (menu1 == 2){
+        let eliminar = prompt("Ingrese el ingrediente a eliminar");
+        ingredientes.splice(eliminar - 1);
+        alert("Ingrediente eliminado")
+    };
+    
+        }
 
 //Desarrollado por: Luis Angel Gelvez Delgado - C.C:1.098.071.730
