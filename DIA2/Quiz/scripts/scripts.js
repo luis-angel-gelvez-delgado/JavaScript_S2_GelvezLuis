@@ -19,16 +19,6 @@ let ingredientes = [
     }
 ];
 
-let hamgur = [
-    {
-        "nombre": "Clásica",
-        "categoria": "Clásica",
-        "ingredientes": "pan, carne de vaca tradicional, Queso doble crema",
-        "precio": 8000,
-        "chef": "ChefA"
-    }
-];
-
 let chefs = [
     {
         "nombre": "Trevor",
@@ -71,9 +61,9 @@ while (booleanitoski == true) {
     \nSeleccione una opción:\
     \n\
     \n1. Ingresar al menu de ingredientes\
-    \n2. Ingresar al menu de Categoria\
-    \n3. Ingresar al menu de Hamburguesas\
-    \n4. Ingresar al menu de Chefs\
+    \n2. Ingresar al menu de Chefs\
+    \n3. Ingresar al menu de Categoria\
+    \n4. Ingresar al menu de Hamburguesas\
     \n5. Salir\
     ======================================");
     if (menu1 == "1") {
@@ -109,14 +99,86 @@ while (booleanitoski == true) {
             } else {
                 alert("Opción incorrecta, volviendo al menu Principal")
             }
+        } else if (menu2 == "2") {
+            let eliminar = prompt("Ingrese el ingrediente a eliminar");
+            ingredientes.splice(eliminar - 1);
+            alert("Ingrediente eliminado")
+        }
+        else if (menu2 == "3") {
+            let cambio = prompt("Ingresa el numero del ingrediente que deseas actualizar")
+            let nombreIng = prompt("Ingresa el nombre del nuevo Ingrediente");
+            let dscpIng = prompt("Ingresa la Descripcion del nuevo Ingrediente");
+            let valorIng = prompt("Ingresa el valor del nuevo Ingrediente");
+            let stock = prompt("Ingresa la cantidad disponible con la que cuenta el nuevo Ingrediente");
+            ingredientes[cambio - 1]["nombre"] = nombreIng;
+            ingredientes[cambio - 1]["descripcion"] = dscpIng;
+            ingredientes[cambio - 1]["valor"] = valorIng;
+            ingredientes[cambio - 1]["stock"] = stock;
+            alert("Ingrediente Actualizado")
+        }
+        else if (menu2 == "4") {
+            let menu = ingredientes.length;
+            for (i = 0; i < menu; i++) {
+                alert(
+                    "Ingrediente N. " + (i + 1) + "\n" +
+                    "Nombre: " + ingredientes[i]["nombre"] + "\n" +
+                    "Descripcion: " + ingredientes[i]["descripcion"] + "\n" +
+                    "Precio: " + ingredientes[i]["precio"] + "\n" +
+                    "Stock: " + ingredientes[i]["stock"]
+                )
+            }
+        }
+    } else if (menu1 == "2") {
+        let menu3 = prompt(
+            "===========================================\
+            \n               Menu de Chefs              \
+            \n===========================================\
+            \nSeleccione una opción:\
+            \n\
+            \n1. Contratar nuevo Chef\
+            \n2. Despedir Chef\
+            \n3. Cambiar Chef\
+            \n4. Ver Chef\
+            \n5. Salir\
+            \n==========================================="
+        )
+        if (menu3 == "1") {
+            let nombreChef = prompt("Ingresa el Nombre del nuevo Chef")
+            let espcChef = prompt("Ingresa la especialidad del nuevo Chef")
+            let seguro = prompt("Segur@ que deseas contratar este Chef? \n1. Si \n2. No\n");
+            if (seguro == "1") {
+                chefs.push({
+                    "nombre": nombreChef,
+                    "especialidad": espcChef
+                })
+            } else if (seguro == "2") {
+                alert("Chef no Contratado")
+            }
+        else if (menu3 == "2") {
+                let despedir = prompt("Ingresa al Chef que deseas Despedir")
+                chefs.splice(despedir - 1);
+                alert("Chef Despedido")
+            }
+        else if (menu3 == "3") {
+            let cambio = prompt("Ingresa el numero del Chef que deseas Cambiar")
+            let nombreChef = prompt("Ingresa el nombre del nuevo Chef");
+            let espcChef = prompt("Ingresa la especialidad del nuevo Ingrediente");
+            chefs[cambio - 1]["nombre"] = nombreChef;
+            chefs[cambio - 1]["especialidad"] = espcChef;
+            alert("Chef Cambiado")
+            }
+        else if (menu3 == "4") {
+            let chefs = chefs.length;
+            for (i = 0; i < chefs; i++) {
+                alert(
+                    "Nombre: " + chefs[i]["nombre"] + "\n" +
+                    "especialidad: " + chefs[i]["especialidad"]
+                )
+            }
         }
     }
-    else if (menu1 == 2) {
-        let eliminar = prompt("Ingrese el ingrediente a eliminar");
-        ingredientes.splice(eliminar - 1);
-        alert("Ingrediente eliminado")
-    };
-
 }
+}
+
 
 //Desarrollado por: Luis Angel Gelvez Delgado - C.C:1.098.071.730
