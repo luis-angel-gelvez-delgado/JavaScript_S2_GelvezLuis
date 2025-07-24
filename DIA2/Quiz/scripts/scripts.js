@@ -101,7 +101,7 @@ while (booleanitoski == true) {
             }
         } else if (menu2 == "2") {
             let eliminar = prompt("Ingrese el ingrediente a eliminar");
-            ingredientes.splice(eliminar - 1);
+            ingredientes.splice(eliminar - 1,1);
             alert("Ingrediente eliminado")
         }
         else if (menu2 == "3") {
@@ -154,11 +154,12 @@ while (booleanitoski == true) {
             } else if (seguro == "2") {
                 alert("Chef no Contratado")
             }
+        }
         else if (menu3 == "2") {
-                let despedir = prompt("Ingresa al Chef que deseas Despedir")
-                chefs.splice(despedir - 1);
-                alert("Chef Despedido")
-            }
+            let despedir = prompt("Ingresa al Chef que deseas Despedir")
+            chefs.splice(despedir - 1, 1);
+            alert("Chef Despedido")
+        }
         else if (menu3 == "3") {
             let cambio = prompt("Ingresa el numero del Chef que deseas Cambiar")
             let nombreChef = prompt("Ingresa el nombre del nuevo Chef");
@@ -166,19 +167,68 @@ while (booleanitoski == true) {
             chefs[cambio - 1]["nombre"] = nombreChef;
             chefs[cambio - 1]["especialidad"] = espcChef;
             alert("Chef Cambiado")
-            }
+        }
         else if (menu3 == "4") {
-            let chefs = chefs.length;
-            for (i = 0; i < chefs; i++) {
+            let Lchefs = chefs.length;
+            for (i = 0; i < Lchefs; i++) {
                 alert(
                     "Nombre: " + chefs[i]["nombre"] + "\n" +
                     "especialidad: " + chefs[i]["especialidad"]
                 )
             }
         }
+    } else if (menu1 == "4") {
+        let menu4 = prompt(
+            "===========================================\
+            \n             Menu de Categoria            \
+            \n===========================================\
+            \nSeleccione una opción:\
+            \n\
+            \n1. Nueva Categoria\
+            \n2. Eliminar Categoria\
+            \n3. Actualizar Categoria\
+            \n4. Ver Categoria\
+            \n5. Salir\
+            \n==========================================="
+        )
+        if (menu4 == "1") {
+            let nombreCat = prompt("Ingresa el Nombre de la nueva Categoria")
+            let descpCat = prompt("Ingresa la Descripción de la nueva Categoria")
+            let seguro = prompt("Segur@ que deseas Añadir esta Categoria? \n1. Si \n2. No\n");
+            if (seguro == "1") {
+                categorias.push({
+                    "nombre": nombreCat,
+                    "categoria": descpCat
+                })
+            } else if (seguro == "2") {
+                alert("Categoria no añadida")
+            }
+        }
+        else if (menu4 == "2") {
+            let eliminar = prompt("Ingresa la categoria que deseas eliminar")
+            categorias.splice(eliminar - 1, 1);
+            alert("Categoria Eliminada")
+        }
+        else if (menu4 == "3") {
+            let cambio = prompt("Ingresa el numero de la categoria que deseas actualizar")
+            let nombreCat = prompt("Ingresa el nombre de la nueva categoria");
+            let espcCat = prompt("Ingresa la descripción de la nueva categoria");
+            categorias[cambio - 1]["nombre"] = nombreCat;
+            categorias[cambio - 1]["especialidad"] = espcCat;
+            alert("Categoria Actualizada")
+        }
+        else if (menu4 == "4") {
+            let lCats = categorias.length;
+            for (i = 0; i < lCats; i++) {
+                alert(
+                    "Nombre: " + categoria[i]["nombre"] + "\n" +
+                    "Descripcion: " + descripcion[i]["descripción"]
+                )
+            }
+        }
     }
-}
 }
 
 
 //Desarrollado por: Luis Angel Gelvez Delgado - C.C:1.098.071.730
+//Con mucha ayuda de Monsalve
