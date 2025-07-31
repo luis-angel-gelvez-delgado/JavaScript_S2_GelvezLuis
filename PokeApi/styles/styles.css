@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap&#39;');
-
 * {
 margin: 0;
 padding: 0;
@@ -29,31 +27,22 @@ body{
     object-fit: contain;
 }
 
-.pokeApi h1{
-    position: absolute;
-    font-weight: 600;
-    color: #aaa;
-    top: 350px;
-    right: 27%;
-    font-size: 1.6rem;
-}
-
 .pokeApi .Pokemom {
     color: black;
 }
 
 .pokeApi form{
     position: absolute;
-    width: 100% ;
-    top: 420px;
+    width: 400px ;
+    height: 100px;
+    top: -230px;
+    left: -418px;
 }
 
 .pokeApi input{
     width: 300px;
     padding: 4%;
     margin-right: 30px;
-    outline: black;
-    border: 2px solid #333;
     border-radius: 5px;
     font-weight: 600;
     color: #3a444d;
@@ -62,24 +51,43 @@ body{
 }
 
 .btns{
-    display: flex;
+    display:flex;
     position: absolute;
-    top: 530px;
-    width: 300px;
-    margin-left: 50px;
-    gap: 20px;
+    top: -160px;
+    left: -385px;
+    gap: 180px;
 }
 
 .pokeApi .btns{
-    width: 140px;
+    width: 300px;
+    height: 50px;
     padding: 4%;
     border: 2px solid #000;
     border-radius: 5px;
-    font-size: 1rem;
     font-weight: 600;
     color: white;
     background-color: #444;
     box-shadow: -2px 3px 0 #222, -4px 6px #000;
+}
+
+.ant{
+    background-color: #444;
+    border: none;
+    position: absolute;
+    left: 0px;
+    font-size: 2rem;
+    width: 150px;
+    height: 45px;
+}
+
+.siguiente{
+    background-color: #444;
+    border: none;
+    position: absolute;
+    left: 150px;
+    font-size: 2rem;
+    width: 145px;
+    height: 45px;
 }
 
 .pokeApi button:hover{
@@ -88,6 +96,6 @@ body{
 
 .pokeApi button:active{
     box-shadow: inset -4px 4px 0 #222;
-    font-size: 0.9rem;
+    font-size: 1.9rem;
 }
 
