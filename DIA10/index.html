@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PokeApi</title>
+    <link rel="shortcut_icon" href="./media/favicon-16x16.png">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
+
 <body>
-    
-</body>
-</html>
+    <img src="./media/pokedex (1).png" alt="Game Boy" class="pokedex">
+    <div class="pokeApi">
+        <div id="data">
+            
+        </div>
+        <form class="input">
+            <input type="search" placeholder="Name or Number" id="buscar" onkeydown="imprimirData(event)"/>
+        </form>
+        <div class="btns">
+            <button class="prev">Prev</button>
+            <button class="siguiente">Siguiente</button>
+        </div>
+    </div>

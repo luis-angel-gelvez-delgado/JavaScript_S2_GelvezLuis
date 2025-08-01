@@ -1,37 +1,33 @@
+function imprimirData(event){
+    if (event.key === 'Enter'){
+        buscarAlgo();
+    }
+}
 
-function buscarPoke() {
-    document.getElementById("results").innerHTML = ``;
+function buscarAlgo() {
+    document.getElementById("dataInfo").innerHTML = ``;
     const nombreUsar = document.getElementById("buscar").value.trim();
     console.log(nombreUsar);
     const xhr = new XMLHttpRequest(); //La importación del XML
     const url = `https://pokeapi.co/api/v2/pokemon/${nombreUsar}`; //Acento Inverso ```+
-    console.log(url);
+
     xhr.open("GET", url, true);
-
     xhr.onreadystatechange = function () {
-        if (xhr.readyState === 3) {
 
-            console.log("Cargando...")
-        }
-
-        else if (xhr.readyState === 4 && xhr.status === 200) {
+        if (xhr.readyState === 4){
             try {
-                const data = JSON.parse(xhr.responseText);
-                console.log(data);
-                //if (data.results && data.results.length > 0) {
-                //    for (let i = 0; i < data.results.length; i++) {
-                let division = document.querySelector(".resultado");
-                
-                console.log(data["name"]);
-                //}
-                //}
+                let data = JSON.parse(xhr.responseText);
+                let results = document.getElementById("dataInfo");
+                results.innerHTML = `
+                <h1 class="num">${data["id"]}</h1>
+                <h1 class="nPoke"> ${data["name"]}</h1>
+                `
             } catch (err) {
                 console.log(err.message);
             }
         }
+        
 
     };
     xhr.send();
-};
-
-buscarPoke();
+}
