@@ -9,43 +9,41 @@
     left: 0;
 }
 
-
 .tapete h1{
-    width: 50vw;
-    height: 20vh;
+    width: 100vw;
+    height: 10vh;
     text-align: center;
     position: relative;
     color: #ffd700;
-    font-size: 18rem;
+    font-size: 4rem;
     font-weight: 700;
     top: 10vh;
     font-family:'Times New Roman', Times, serif;
-    left: 28%;
 }
 
 .btns{
-    width: 40vh;
     position: relative;
     top: 15vh;
     align-items: center;
-    left: 43%;
-    border-radius:2vh ;
+    left: 40vw;
+    width: 40vh;
 }
 
 .btns .singin{
-    width: 40vh;
+    width: 45vh;
     height: 15vh;
-    font-size: 3rem;
+    font-size: 2rem;
     cursor: pointer;
     background-color: #ff9800;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-radius: 2vh;
     border: 5px solid black;
 } 
+
 .btns .rules{
-    width: 40vh;
+    width: 45vh;
     height: 15vh;
-    font-size: 3rem;
+    font-size: 2rem;
     cursor: pointer;
     background-color: #f5f5dc;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
