@@ -8,9 +8,6 @@
     top: 0;
     left: 0;
 }
-.tapete button:hover{
-    cursor: pointer;
-}
 
 .tapete h1{
     width: 100vw;
@@ -20,21 +17,20 @@
     color: #ffd700;
     font-size: 4rem;
     font-weight: 700;
-    top: 10vh;
+    top: 1vh;
     font-family:'Times New Roman', Times, serif;
 }
 
-.btns{
+.tapete button{
     position: relative;
-    top: 15vh;
+    top: 65vh;
     align-items: center;
     left: 40vw;
-    width: 40vh;
 }
 
-.btns .singin{
-    width: 45vh;
-    height: 15vh;
+.menu{
+    width: 35vh;
+    height: 10vh;
     font-size: 2rem;
     background-color: #ff9800;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -43,17 +39,24 @@
     box-shadow: -2px 3px 0 #222, -4px 6px #000;
 } 
 
-.btns .rules{
-    width: 45vh;
-    height: 15vh;
-    font-size: 2rem;
-    background-color: #f5f5dc;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border-radius: 2vh;
-    border: 5px solid black;
-    box-shadow: -2px 3px 0 #222, -4px 6px #000;
+.rules p{
+    position: relative;
+    font-size: 1rem;
+    top: -4vh;
+    color: white;
 }
 
-
-
-
+.rules {
+    display: grid;
+    grid: 65vh / auto auto auto auto;
+    grid-gap: 10px;
+    background-color: none;
+    padding: 10px;
+}
+.rules div {
+    position: relative;
+    top: 15vh;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
