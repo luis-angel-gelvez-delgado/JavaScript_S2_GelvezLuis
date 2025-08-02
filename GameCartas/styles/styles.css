@@ -1,20 +1,54 @@
-body{
+.tapete{
+    position: absolute;
     background: url(./../media/tapete.jpg);
-    margin: 0;
-    padding: 0;
+    background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+    top: 0;
+    left: 0;
 }
 
+
 .tapete h1{
+    width: 50vw;
+    height: 20vh;
     text-align: center;
     position: relative;
-    color: white;
-    font-size: 7rem;
+    color: #ffd700;
+    font-size: 18rem;
     font-weight: 700;
-    height: auto;
     top: 10vh;
+    font-family:'Times New Roman', Times, serif;
+    left: 28%;
 }
 
 .btns{
-    
+    width: 40vh;
+    position: relative;
+    top: 15vh;
+    align-items: center;
+    left: 43%;
+    border-radius:2vh ;
 }
+
+.btns .singin{
+    width: 40vh;
+    height: 15vh;
+    font-size: 3rem;
+    cursor: pointer;
+    background-color: #ff9800;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 2vh;
+    border: 5px solid black;
+} 
+.btns .rules{
+    width: 40vh;
+    height: 15vh;
+    font-size: 3rem;
+    cursor: pointer;
+    background-color: #f5f5dc;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 2vh;
+    border: 5px solid black;
+} 
