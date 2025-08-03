@@ -7,11 +7,65 @@
     min-width: 100%;
     top: 0;
     left: 0;
-    color: aqua;
+    color: white;
 }
 
-.cards{
-    background-color: bisque;
-    width: 230px;
-    height: 314px;
+.baraja, .susCards, .misCards{
+    position: absolute;
+    border: 5px solid white;
+    width: 15vw;
+    height: 40vh;
+    border-radius: 15px;
+}
+
+.susCards{
+    left: 42%;
+    top:2vh;
+}
+
+.misCards{
+    left: 42%;
+    top: 57vh;
+}
+
+.baraja{
+    left: 15%;
+    top: 30vh;
+}
+
+.bloqCzE, .bloqCzY{
+    position: absolute;
+    border: 5px solid black;
+    width: 15vw;
+    height: 7vh;
+    border-radius: 15px;
+}
+
+.bloqCzE{
+    left: 22%;
+    top:5vh;
+}
+
+.bloqCzY{
+    left: 62%;
+    top: 61vh;
+}
+
+
+.btns, .btnMenr, .btnMayr, .btnEqal{
+    position: absolute;
+    border: 5px solid black;
+    width: 15vw;
+    height: 7vh;
+    border-radius: 15px;
+}
+
+bloqCzE{
+    left: 22%;
+    top:5vh;
+}
+
+bloqCzY{
+    left: 62%;
+    top: 61vh;
 }
