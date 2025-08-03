@@ -34,8 +34,8 @@
 }
 
 .bloqCzE, .bloqCzY{
-    position: absolute;
-    border: 5px solid black;
+    position: relative;
+    border: 5px solid white;
     width: 15vw;
     height: 7vh;
     border-radius: 15px;
@@ -45,27 +45,65 @@
     left: 22%;
     top:5vh;
 }
+.bloqCzE {
+    display: grid;
+    grid: 1vh / auto auto auto;
+    grid-gap: 7vh;
+    background-color: black;
+    padding: 1vw;
+    margin-left: 1vw;
+}
+
+.bloqCzE > span {
+    padding: 0vh 0;
+}
 
 .bloqCzY{
-    left: 62%;
-    top: 61vh;
+    left: 60%;
+    top: 45vh;
+}
+.bloqCzY {
+    display: grid;
+    grid: 1vh / auto auto auto;
+    grid-gap: 7vh;
+    background-color: black;
+    padding: 1vw;
+    margin-left: 1vw;
+    }
+
+    .bloqCzY > span {
+    padding: 0vh 0;
 }
 
-
-.btns, .btnMenr, .btnMayr, .btnEqal{
+.btnMenr, .btnMayr, .btnEqal{
     position: absolute;
     border: 5px solid black;
-    width: 15vw;
-    height: 7vh;
+    background-color: darkorange;
+    width: 13.5vw;
+    height: 10vh;
     border-radius: 15px;
+        cursor: pointer;
 }
 
-bloqCzE{
-    left: 22%;
-    top:5vh;
+.btnMayr{
+    left: 63%;
+    top:72vh;
 }
 
-bloqCzY{
-    left: 62%;
-    top: 61vh;
+.btnMenr{
+    left: 63%;
+    top:85vh;
+}
+
+.btnEqal{
+    left: 24%;
+    top:78.5vh;
+}
+
+
+.bloqsCora img{
+    position: absolute;
+    width: 3vw;
+    height: 6vh;
+    margin-top: 1%;
 }
