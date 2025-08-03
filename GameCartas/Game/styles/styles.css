@@ -1,0 +1,17 @@
+.tapete{
+    position: absolute;
+    background: url(./../media/tapete.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+    top: 0;
+    left: 0;
+    color: aqua;
+}
+
+.cards{
+    background-color: bisque;
+    width: 230px;
+    height: 314px;
+}
