@@ -23,14 +23,14 @@
 
 .tapete button{
     position: relative;
-    top: 65vh;
+    top: 56vh;
     align-items: center;
-    left: 40vw;
+    left: 65vw;
 }
 
 .menu{
-    width: 35vh;
-    height: 10vh;
+    width: 50vh;
+    height: 15vh;
     font-size: 2rem;
     background-color: #ff9800;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -41,9 +41,11 @@
 
 .rules p{
     position: relative;
-    font-size: 1rem;
+    font-size: 1.3rem;
     top: -4vh;
     color: white;
+    padding-left: 5vw;
+    padding-right: 5vh;
 }
 
 .rules {
