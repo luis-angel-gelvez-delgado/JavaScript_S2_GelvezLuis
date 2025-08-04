@@ -82,7 +82,8 @@
     width: 13.5vw;
     height: 10vh;
     border-radius: 15px;
-        cursor: pointer;
+    cursor: pointer;
+    font-size: 2rem;
 }
 
 .btnMayr{

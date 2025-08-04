@@ -4,8 +4,8 @@
 //Modularizar el consumo de la api
 function buscarAlgo(){
     const nombreUsar = prompt("Ingresar el nombre del personaje a buscar");
-    const xhr = new XMLHttpRequest(); //La importación del XML
-    const url = `https://swapi.dev/api/people?=${nombreUsar}`; //Acento Inverso ```
+    const xhr = new XMLHttpRequest();
+    const url = `https://swapi.dev/api/people?=${nombreUsar}`;
     console.log(url);
     xhr.open("GET",url, true);
     xhr.onreadystatechange = function () {
