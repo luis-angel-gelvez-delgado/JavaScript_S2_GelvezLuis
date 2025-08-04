@@ -10,7 +10,8 @@
     color: white;
 }
 
-.baraja, .susCards, .misCards{
+
+#baraja, #susCards, #misCards{
     position: absolute;
     border: 5px solid white;
     width: 15vw;
@@ -18,17 +19,17 @@
     border-radius: 15px;
 }
 
-.susCards{
+#susCards{
     left: 42%;
     top:2vh;
 }
 
-.misCards{
+#misCards{
     left: 42%;
     top: 57vh;
 }
 
-.baraja{
+#baraja{
     left: 15%;
     top: 30vh;
 }

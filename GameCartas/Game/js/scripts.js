@@ -1,26 +1,25 @@
+function revelarCartas(cards) {
+    document.getElementById('susCards').innerHTML = `<img src= ${cards[0]['image']} alt="noCarga">`
+    document.getElementById('misCards').innerHTML = `<img src="https://www.deckofcardsapi.com/static/img/back.png" alt="noCarga">`
+}
+function repartirCartas(idMazo) {
 
-function repartirCartas() {
-    document.getElementById("results").innerHTML=``;
+
     const xhr = new XMLHttpRequest();
-    const url = `https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1`;
+    const url = `https://www.deckofcardsapi.com/api/deck/${idMazo}/draw/?count=2`;
     xhr.open("GET", url, true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             try {
+
+                const misCards = document.getElementsByClassName("misCards")
+
                 const data = JSON.parse(xhr.responseText);
-                if (data.results && data.results.length > 0) {
-                    for (let i = 0; i < data.results.length; i++) {
-                        let division = document.getElementById("results");
-                        division.innerHTML += `
-                        <div class="cards">
-            <img src="${daticos["results"][i]["image"]}" alt="">
-            <h3>${daticos["results"][i]["name"]}</h3>
-            <p><strong>Status:</strong>${daticos["results"][i]["status"]}</p>
-            <p><strong>Specie:</strong>${daticos["results"][i]["species"]}</p>
-        </div>
-                        `
-                    }
-                }
+                const cards = data['cards']
+                console.log(cards)
+                document.getElementById('susCards').innerHTML = `<img src="https://www.deckofcardsapi.com/static/img/back.png" alt="noCarga">`
+                document.getElementById('misCards').innerHTML = `<img src="https://www.deckofcardsapi.com/static/img/back.png" alt="noCarga">`
+                revelarCartas(cards)
             }
             catch (err) {
                 alert(err.message);
@@ -29,3 +28,27 @@ function repartirCartas() {
     };
     xhr.send();
 }
+
+
+function obtenerMazo() {
+    const xhr = new XMLHttpRequest();
+    const url = `https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1`;
+    xhr.open("GET", url, true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            try {
+
+                const data = JSON.parse(xhr.responseText);
+                const ideDeMazo = data['deck_id']
+                repartirCartas(ideDeMazo)
+
+            }
+            catch (err) {
+                alert(err.message);
+            }
+        }
+    };
+    xhr.send();
+}
+
+obtenerMazo()
