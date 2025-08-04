@@ -1,5 +1,5 @@
-function imprimirData(event){
-    if (event.key === 'Enter'){
+function imprimirData(event) {
+    if (event.key === 'Enter') {
         buscarAlgo();
     }
 }
@@ -10,11 +10,9 @@ function buscarAlgo() {
     console.log(nombreUsar);
     const xhr = new XMLHttpRequest(); //La importación del XML
     const url = `https://pokeapi.co/api/v2/pokemon/${nombreUsar}`; //Acento Inverso ```+
-
     xhr.open("GET", url, true);
     xhr.onreadystatechange = function () {
-
-        if (xhr.readyState === 4){
+        if (xhr.readyState === 4) {
             try {
                 let data = JSON.parse(xhr.responseText);
                 let results = document.getElementById("dataInfo");
@@ -26,8 +24,6 @@ function buscarAlgo() {
                 console.log(err.message);
             }
         }
-        
-
     };
     xhr.send();
 }

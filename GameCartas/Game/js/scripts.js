@@ -1,7 +1,6 @@
 
-function buscarPersonaje() {
+function repartirCartas() {
     document.getElementById("results").innerHTML=``;
-    const nombreUsar = document.getElementById("nombreInput").value.trim();
     const xhr = new XMLHttpRequest();
     const url = `https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1`;
     xhr.open("GET", url, true);
