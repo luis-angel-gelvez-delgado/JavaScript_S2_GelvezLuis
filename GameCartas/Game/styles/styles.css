@@ -34,6 +34,14 @@
     top: 30vh;
 }
 
+.cards img{
+    position: relative;
+    width: 14vw;
+    height: 38vh;
+    top: 2%;
+    left: 3%;
+}
+
 .bloqCzE, .bloqCzY{
     position: relative;
     border: 5px solid white;
@@ -76,7 +84,7 @@
     padding: 0vh 0;
 }
 
-.btnMenr, .btnMayr, .btnEqal{
+.btnMenor, .btnMayor, .btnEqual{
     position: absolute;
     border: 5px solid black;
     background-color: darkorange;
@@ -87,17 +95,17 @@
     font-size: 2rem;
 }
 
-.btnMayr{
+.btnMayor{
     left: 63%;
     top:72vh;
 }
 
-.btnMenr{
+.btnMenor{
     left: 63%;
     top:85vh;
 }
 
-.btnEqal{
+.btnEqual{
     left: 24%;
     top:78.5vh;
 }
