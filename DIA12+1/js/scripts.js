@@ -19,22 +19,22 @@ function buscarSuperHero() { //esta es la funcion ¿Principal?
                         let division = document.getElementById("resultados");
                         division.innerHTML += /*NPI de por que la division*/
                         // El div a continuacion es para acomodar de manera ordenada la data que estaremos extrayendo, y a continuación: La data
-                        //
+                        // La estructura que usaremos para buscar la data ser la suguiente(usaremos el color de pelo como ejemplo): <h3>${data["results"][i]["appearence"]["hair-color"]}</h3>  // El simbolo "$" sirve para hacer codigo dentro de unas ``, y el <h3> no debe ser un h3 realmente, es la manera que queremos que lo represente el style
                         `<div class="card">
                             <img src="${data["results"][i]["image"]["url"]}">
                             <h3>${data["results"][i]["name"]}</h3>
                             <p><strong>ID:</strong>${data["results"][i]["id"]}
                         </div>`
-                        console.log(data["results"][i]["name"])
+                        console.log(data["results"][i]["name"])// Esto hace que el los nombres buscados se impriman en consola
                     }
                 }
             }
             catch {
-                console.log("Error");
+                console.log("Error");// Esto es por si hay un error, lo presente en consola
             }
         }
     }
-    xhr.send();
+    xhr.send();// NPI pa
 }
 /* Los readyState
 0	UNSENT	Client has been created. open() not called yet.

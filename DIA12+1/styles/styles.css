@@ -1,35 +1,35 @@
 body{
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    text-align: center;
+    font-family: Arial, sans-serif; /*para el tipo de letra*/
+    padding: 20px;/*El espacio que hay entre el texto y el borde*/
+    text-align: center;/*PAra alinear el texto en la mitad de la seccion*/
 }
-input[placeholder="Ingresa un nombre..."]{
-    padding: 10px;
-    width: 250px;
-    font-size: 16px;
-    margin-left: 10px;
+input[placeholder="Ingresa un nombre..."]{/*esto es para la barra de busqueda, el placeHolder hace que el texto predeterminado este de "fondo" dentro del la barra de busqueda*/
+    padding: 10px;/*El espacio que hay entre el texto y el borde*/
+    width: 250px;/*Ancho de la barra de busqueda*/
+    font-size: 16px;/*tamaño de la letra*/
+    margin-left: 10px;/*es el margen que hay entre el texto y el borde izquierdo*/
 }
 
-button{
-    padding: 10px 15px;
-    font-size: 16px;
+button{/*el boton*/
+    padding: 10px 15px;/*espacio entre el texto y el borde*/
+    font-size: 16px;/*tamaño de letra*/
     
 }
-.resultado{
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.resultado{/*el ¿resultado?*/
+    margin-top: 30px;/*margen entre el texto y el borde superior*/
+    display: flex;/*Para que las cards se acomoden en orden*/
+    flex-wrap: wrap;/*sirve para acomodar el contenido dentro de la seccion sin que se totee tan feo*/
+    justify-content: center;/*manda to' pal' centro*/
+    gap: 20px;/*es el espacio que hay entre objetos, separandolos vertical y horizontalmente*/
 }
-.card{
-    background-color: #fff;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 200px;
+.card{ /*Las cards son las secciones donde iran los elementos*/
+    background-color: #fff;/*color de fondo*/
+    padding: 15px;/*espacio entre texto y borde*/
+    border: 1px solid #ddd;/*borde pa' que se vea mas bonito*/
+    border-radius: 8px;/*la curva de las esquinas*/
+    width: 200px;/*el ancho de la card*/
 }
-.card img{
-    width: 100%;
-    border-radius: 5px;
+.card img{ /*la imagen que ira dentro de la card*/
+    width: 100%; /*que ocupe el tamaño indicado dentro de la sección*/
+    border-radius: 5px;/*la curva de las esquinas*/
 }
