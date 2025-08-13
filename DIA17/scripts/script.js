@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded',()=>{//para cuando todo cargue, eje
 
 
 
+
     async function addNewTask(){
         const task = taskInput.value;
         console.log(task);
