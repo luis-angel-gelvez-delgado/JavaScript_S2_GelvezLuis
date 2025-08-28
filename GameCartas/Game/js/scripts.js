@@ -1,13 +1,3 @@
-async function revelarCartas(cards) {
-  //aqui esta la funcion revelarCartas
-  document.getElementById(
-    "susCards"
-  ).innerHTML = `<img src= ${cards[0]["image"]} alt="noCarga">`;
-  document.getElementById(
-    "misCards"
-  ).innerHTML = `<img src=${cards[1]["image"]} alt="noCarga">`;
-  console.log("hello");
-} 
 function validarValor(value) {
   if (value == "ACE"){return 1}
   else if (value == "JACK"){return 11}
@@ -15,6 +5,42 @@ function validarValor(value) {
   else if (value == "KING"){return 13}
   else {return parseInt(value)} 
 }
+
+
+
+
+
+
+//aqui esta la funcion revelarCartas
+async function revelarCartas(cards) {
+  document.getElementById(
+    "susCards"
+  ).innerHTML = `<img src= ${cards[0]["image"]} alt="noCarga">`;
+  document.getElementById(
+    "misCards"
+  ).innerHTML = `<img src=${cards[1]["image"]} alt="noCarga">`;
+  console.log("hello");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function repartirCartas(idMazo) {
   const xhr = new XMLHttpRequest();
   const url = `https://www.deckofcardsapi.com/api/deck/${idMazo}/draw/?count=2`;
@@ -29,12 +55,19 @@ function repartirCartas(idMazo) {
         const data = JSON.parse(xhr.responseText);
         const cards = data["cards"];
         console.log(cards);
+
+
         document.getElementById(
           "susCards"
         ).innerHTML = `<img src="https://www.deckofcardsapi.com/static/img/back.png" alt="noCarga">`;
         document.getElementById(
           "misCards"
         ).innerHTML = `<img src="https://www.deckofcardsapi.com/static/img/back.png" alt="noCarga">`;
+
+
+
+
+
         btnMenor.addEventListener("click", () => {
           if (validarValor(cards[0]["value"]) < validarValor(cards[1]["value"])) {
             alert("Perdiste una ronda , tu carta no era menor");
@@ -69,6 +102,20 @@ function repartirCartas(idMazo) {
   };
   xhr.send();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function obtenerMazo() {
   const xhr = new XMLHttpRequest();
