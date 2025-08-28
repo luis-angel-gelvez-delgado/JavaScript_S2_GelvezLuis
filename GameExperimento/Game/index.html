@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotar Carta</title>
+    <style>
+        .card-container {
+            perspective: 1000px;
+            /* Profundidad para 3D */
+            width: 200px;
+            height: 300px;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+            cursor: pointer;
+        }
+
+        .card.is-flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            background-color: white;
+        }
+
+        .card-front {
+            background-color: #f8f8f8;
+        }
+
+        .card-back {
+            background-color: #4CAF50;
+            color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card-container" onclick="flipCard(this)">
+        <div class="card">
+            <div class="card-face card-front">
+                Frente
+            </div>
+            <div class="card-face card-back">
+                Reverso
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function flipCard(container) {
+            container.querySelector('.card').classList.toggle('is-flipped');
+        }
+    </script>
+
+</body>
+
+</html>
+
+<!--lo que vamos a hacer sera que nuestra carta si tenga esta modificacion, y ya la funcion para que se voltee la carta enemiga con el boton, la ga¿¿agregsare mas tarde-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Cartas</title>
+    <style>
+        .card-container {
+            perspective: 1000px;
+            width: 200px;
+            height: 300px;
+            display: inline-block;
+            margin: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .card-container.visible {
+            opacity: 1;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+        }
+
+        .card.is-flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .card-front {
+            background-color: #f8f8f8;
+        }
+
+        .card-back {
+            background-color: #4CAF50;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        button {
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="mostrarCartas()">Mostrar Cartas</button>
+
+    <div id="zona-cartas">
+        <!-- Puedes duplicar esto para más cartas -->
+        <div class="card-container">
+            <div class="card">
+                <div class="card-face card-front">Frente 1</div>
+                <div class="card-face card-back">Reverso 1</div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-face card-front">Frente 2</div>
+                <div class="card-face card-back">Reverso 2</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function mostrarCartas() {
+            const containers = document.querySelectorAll('.card-container');
+            containers.forEach((container, index) => {
+                setTimeout(() => {
+                    container.classList.add('visible');
+                    container.querySelector('.card').classList.add('is-flipped');
+                }, index * 300); // efecto en cascada
+            });
+        }
+    </script>
+
+</body>
+
+</html>
+
+<!--esta es la funcion para que se revelen con el boton-->
