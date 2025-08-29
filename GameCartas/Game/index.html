@@ -15,8 +15,22 @@
         <div class="cards">
             <div id="baraja"><img src="https://www.deckofcardsapi.com/static/img/back.png" alt="noCarga"></div>
             <div id="susCards"></div>
-            <div id="misCards"></div>
+
+
+
+        <!--esta parte es para rotar mi carta dandole click-->
+            <div class="card-container" onclick="flipCard(this)">
+                <div id="misCards" class="misCards">
+                    <div class="card-face card-front"></div>
+                    <div class="card-face card-back"></div>
+                </div>
+            </div>
+        <!--aqui acaba lo de la rotación-->
+
+
+
         </div>
+
         <div class="bloqsCora">
             <div class="bloqCzE">
                 <span class="coraM1" id="m1"><img src="./media/Heart.png"></span>

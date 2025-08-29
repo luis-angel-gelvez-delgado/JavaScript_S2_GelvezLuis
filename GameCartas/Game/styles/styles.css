@@ -11,7 +11,7 @@
 }
 
 
-#baraja, #susCards, #misCards{
+#baraja, #susCards{
     position: absolute;
     border: 5px solid white;
     width: 15vw;
@@ -24,10 +24,37 @@
     top:2vh;
 }
 
-#misCards{
+.misCards{
     left: 42%;
     top: 57vh;
 }
+
+.card-container {
+    perspective: 1000px;
+    /* Profundidad para 3D */
+    width: 200px;
+    height: 300px;
+}
+.misCards{
+    position: relative;
+    border: 5px solid white;
+    width: 15vw;
+    height: 40vh;
+    border-radius: 15px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    cursor: pointer;
+}
+.misCards.is-flipped {
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
 
 #baraja{
     left: 15%;
