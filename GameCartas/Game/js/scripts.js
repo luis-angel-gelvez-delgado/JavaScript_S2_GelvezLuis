@@ -3,11 +3,21 @@ async function revelarCartas(cards) {
   document.getElementById(
     "susCards"
   ).innerHTML = `<img src= ${cards[0]["image"]} alt="noCarga">`;
+
+
+
   document.getElementById(
     "misCards"
   ).innerHTML = `<img src=${cards[1]["image"]} alt="noCarga">`;
   console.log("hello");
 } 
+function flipCard(container) {
+  container.querySelector('.card').classList.toggle('is-flipped');
+}
+
+
+
+
 function validarValor(value) {
   if (value == "ACE"){return 1}
   else if (value == "JACK"){return 11}
