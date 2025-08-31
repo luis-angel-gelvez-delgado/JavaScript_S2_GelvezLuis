@@ -31,9 +31,8 @@
 
 .card-container {
     perspective: 1000px;
+     display: inline-block;
     /* Profundidad para 3D */
-    width: 200px;
-    height: 300px;
 }
 .misCards{
     position: relative;

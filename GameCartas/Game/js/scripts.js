@@ -12,7 +12,7 @@ async function revelarCartas(cards) {
   console.log("hello");
 } 
 function flipCard(container) {
-  container.querySelector('.card').classList.toggle('is-flipped');
+  container.querySelector('.miCard').classList.toggle('is-flipped');
 }
 
 
@@ -65,10 +65,11 @@ function repartirCartas(idMazo) {
         });
         btnEqual.addEventListener("click", () => {
           if (validarValor(cards[0]["value"]) == validarValor(cards[1]["value"])) {
-            alert("Perdiste una ronda, tu carta no era igual");
+            alert("Ganaste una ronda!!! Ambas cartas eran Iguales");
+            
           }
           else{ 
-            alert("Ganaste una ronda!!! Ambas cartas eran Iguales")
+            alert("Perdiste una ronda, tu carta no era igual")
           }
           revelarCartas(cards);
         });
